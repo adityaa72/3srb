@@ -1,13 +1,11 @@
-import {SHARED_VARIABLE} from '@share/common';
-import React from 'react';
-import {SafeAreaView, Text} from 'react-native';
+import { TrpcProvider } from "@/providers/TrpcProvider";
+import Router from "@/router/RootRouter";
+import "react-native-gesture-handler";
 
-const App = () => {
-  return (
-    <SafeAreaView>
-      <Text>{SHARED_VARIABLE}</Text>
-    </SafeAreaView>
-  );
-};
+const App = () => (
+  <TrpcProvider>
+    <Router />
+  </TrpcProvider>
+);
 
 export default App;

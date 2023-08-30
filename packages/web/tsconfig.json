@@ -20,7 +20,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@validations/*": ["../common/validations/*"],
-      "@constants/*": ["../common/constants/*"]
+      "@constants/*": ["../common/constants/*"],
+      "@utils/*": ["../common/utils/*"]
     }
   },
   "include": [

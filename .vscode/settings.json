@@ -1,12 +1,14 @@
 {
     "cSpell.words": [
+        "clsx",
         "Jamsrworld",
         "nextjs",
         "share",
         "superjson",
         "tailwindcss",
         "tanstack",
-        "trpc"
+        "trpc",
+        "twrnc"
     ],
     "files.exclude": {
         "**/.git": true,
