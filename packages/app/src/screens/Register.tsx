@@ -7,7 +7,12 @@ import { RegisterForm } from "../sections/auth/register";
 
 const Register = () => {
   return (
-    <ScrollView>
+    <ScrollView
+      contentContainerStyle={{
+        flexGrow: 1,
+      }}
+      automaticallyAdjustKeyboardInsets={true}
+    >
       <AuthLayout>
         <RegisterForm />
         <Stack direction="row" className="self-center">

@@ -14,7 +14,9 @@ const register = discriminatedUnion("step", [
   .and(
     object({
       email,
-      name: string().nonempty("Name is required"),
+      name: string()
+        .nonempty("Name is required")
+        .min(2, "Name must be at least 2 characters"),
       password: zodSchemas.password("Password"),
       confirmPassword: zodSchemas.password("Confirm Password"),
     })

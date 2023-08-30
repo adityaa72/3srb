@@ -6,6 +6,7 @@ import Typography from "@/components/Typography";
 import { APP_COLORS } from "@/theme/colors";
 import React from "react";
 import LinearGradient from "react-native-linear-gradient";
+
 type Props = {
   children: React.ReactNode;
 };
@@ -20,8 +21,8 @@ const AuthLayout = ({ children }: Props) => {
         APP_COLORS.indigo[500],
       ]}
     >
-      <Box className="flex flex-1">
-        <Box className="justify-center items-center" style={{ height: "40%" }}>
+      <Box className="min-h-full">
+        <Box className="justify-center items-center" style={{ height: 350 }}>
           <Image
             className="w-40 h-40 self-center"
             source={{
