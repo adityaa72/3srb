@@ -70,7 +70,15 @@ function Router() {
               },
             }}
           />
-          <Screen name="Register" component={Register} />
+          <Screen
+            name="Register"
+            component={Register}
+            options={{
+              cardStyle: {
+                padding: 0,
+              },
+            }}
+          />
         </Navigator>
       </NavigationContainer>
     </SafeAreaView>

@@ -1,17 +1,11 @@
 import Button from "@/components/Button";
 import { RHFProvider, RHFTextField } from "@/components/RHF";
-import { type RouterInput } from "@/utils/api";
+import { api, type RouterInput } from "@/utils/api";
 import { zodResolver } from "@hookform/resolvers/zod";
+import authSchema from "@validations/user/auth";
 import { useForm, type SubmitHandler } from "react-hook-form";
-import { object, string } from "zod";
-
-const validator = object({
-  email: string().email().nonempty(),
-  password: string().nonempty("Password is required").min(5, ""),
-});
 
 type FormValues = RouterInput["user"]["auth"]["login"];
-// const v =
 
 const LoginForm = () => {
   const defaultValues: FormValues = {
@@ -21,16 +15,26 @@ const LoginForm = () => {
 
   const methods = useForm<FormValues>({
     defaultValues,
-    resolver: zodResolver(validator),
+    resolver: zodResolver(authSchema.login),
   });
   const { handleSubmit } = methods;
-  const onSubmit: SubmitHandler<FormValues> = data => {};
+
+  const { mutate, isLoading } = api.user.auth.login.useMutation();
+  const onSubmit: SubmitHandler<FormValues> = data => mutate(data);
 
   return (
     <RHFProvider methods={methods}>
-      <RHFTextField label="Email" name="email" keyboardType="email-address" />
-      <RHFTextField label="Password" name="password" secureTextEntry />
-      <Button onPress={handleSubmit(onSubmit)} size="large">
+      <RHFTextField<FormValues>
+        label="Email"
+        name="email"
+        keyboardType="email-address"
+      />
+      <RHFTextField<FormValues>
+        label="Password"
+        name="password"
+        secureTextEntry
+      />
+      <Button loading={isLoading} onPress={handleSubmit(onSubmit)} size="large">
         Proceed
       </Button>
     </RHFProvider>

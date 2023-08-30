@@ -1,17 +1,17 @@
-import schema from "@validations/user/auth";
+import authSchema from "@validations/user/auth";
 import { createTRPCRouter, publicProcedure } from "../../trpc";
 import controllers from "./controllers";
 
 const register = publicProcedure
-  .input(schema.register)
+  .input(authSchema.register)
   .mutation(async ({ ctx, input }) => controllers.register({ ctx, input }));
 
 const login = publicProcedure
-  .input(schema.login)
+  .input(authSchema.login)
   .mutation(async ({ ctx, input }) => controllers.login({ ctx, input }));
 
 const forgotPassword = publicProcedure
-  .input(schema.forgotPassword)
+  .input(authSchema.forgotPassword)
   .mutation(async ({ ctx, input }) =>
     controllers.forgotPassword({ ctx, input }),
   );

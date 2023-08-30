@@ -49,15 +49,15 @@ const forgotPassword = discriminatedUnion("step", [
     }
   );
 
-export type Schema = {
+export type AuthSchema = {
   register: TypeOf<typeof register>;
   login: TypeOf<typeof login>;
   forgotPassword: TypeOf<typeof forgotPassword>;
 };
 
-const schema = {
+const authSchema = {
   forgotPassword,
   login,
   register,
 };
-export default schema;
+export default authSchema;

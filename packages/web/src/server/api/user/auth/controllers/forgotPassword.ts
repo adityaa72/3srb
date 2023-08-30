@@ -7,14 +7,14 @@ import { type ResponseMessage } from "@/types";
 import { createHash } from "@/utils/bcrypt";
 import { OTP_SENT_MESSAGE } from "@constants/text";
 import { Otp_Purpose } from "@prisma/client";
-import { type Schema } from "@validations/user/auth";
+import { type AuthSchema } from "@validations/user/auth";
 
 const forgotPassword = async ({
   ctx: _,
   input,
 }: {
   ctx: Context;
-  input: Schema["forgotPassword"];
+  input: AuthSchema["forgotPassword"];
 }) => {
   const { email, step } = input;
 

@@ -2,14 +2,14 @@ import { type Context } from "@/server/api/trpc";
 import User from "@/server/libs/User";
 import { type ResponseMessage } from "@/types";
 import { createToken } from "@/utils/jwt";
-import { type Schema } from "@validations/user/auth";
+import { type AuthSchema } from "@validations/user/auth";
 
 const login = async ({
   ctx: _,
   input,
 }: {
   ctx: Context;
-  input: Schema["login"];
+  input: AuthSchema["login"];
 }) => {
   const { email, password } = input;
 

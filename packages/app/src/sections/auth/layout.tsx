@@ -1,12 +1,11 @@
 import Box from "@/components/Box";
 import Button from "@/components/Button";
-import { Divider } from "@/components/Divider";
+import Divider from "@/components/Divider";
+import Image from "@/components/Image";
 import Typography from "@/components/Typography";
 import { APP_COLORS } from "@/theme/colors";
 import React from "react";
-import { Image } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
-
 type Props = {
   children: React.ReactNode;
 };

@@ -8,14 +8,14 @@ import { type ResponseMessage } from "@/types";
 import { createHash } from "@/utils/bcrypt";
 import { ClientError } from "@/utils/errors";
 import { Otp_Purpose } from "@prisma/client";
-import { type Schema } from "@validations/user/auth";
+import { type AuthSchema } from "@validations/user/auth";
 
 const register = async ({
   ctx: _,
   input,
 }: {
   ctx: Context;
-  input: Schema["register"];
+  input: AuthSchema["register"];
 }) => {
   const { step, email, name, password } = input;
 

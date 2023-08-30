@@ -24,12 +24,7 @@
       "@utils/*": ["../common/utils/*"]
     }
   },
-  "include": [
-    ".eslintrc.js",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.cjs",
-    "**/*.mjs"
-  ],
+  "references": [{ "path": "../web" }],
+  "include": [".eslintrc.js", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.mjs"],
   "exclude": ["node_modules"]
 }
