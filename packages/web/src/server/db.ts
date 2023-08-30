@@ -1,4 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import { type Prisma, PrismaClient } from "@prisma/client";
+import { type DefaultArgs } from "@prisma/client/runtime/library";
 
 import { env } from "@/env.mjs";
 
@@ -14,3 +15,9 @@ export const prisma =
   });
 
 if (env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+
+
+export type PrismaTransaction = Omit<
+  PrismaClient<Prisma.PrismaClientOptions, never, DefaultArgs>,
+  "$connect" | "$disconnect" | "$on" | "$transaction" | "$use" | "$extends"
+>;

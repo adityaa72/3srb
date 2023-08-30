@@ -1,6 +1,9 @@
 {
-  "name": "@sharecode/common",
+  "name": "@share/common",
   "version": "1.0.0",
   "main": "index.ts",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  }
 }

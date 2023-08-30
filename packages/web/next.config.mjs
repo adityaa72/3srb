@@ -3,6 +3,11 @@
  * for Docker builds.
  */
 await import("./src/env.mjs");
+import TsconfigPathsPlugin from "tsconfig-paths-webpack-plugin";
+import withTM from "next-transpile-modules";
+
+const withTranspileModules = withTM(["@share/common"]); 
+
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -17,6 +22,16 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  experimental: {
+    externalDir: true,
+  },
+  resolve: {
+    plugins: [
+      new TsconfigPathsPlugin({
+        /* options: see below */
+      }),
+    ],
+  },
 };
 
-export default config;
+export default withTranspileModules(config);

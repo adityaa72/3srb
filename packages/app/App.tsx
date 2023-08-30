@@ -1,4 +1,4 @@
-import {SHARED_VARIABLE} from '@sharecode/common';
+import {SHARED_VARIABLE} from '@share/common';
 import React from 'react';
 import {SafeAreaView, Text} from 'react-native';
 

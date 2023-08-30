@@ -18,7 +18,9 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@validations/*": ["../common/validations/*"],
+      "@constants/*": ["../common/constants/*"]
     }
   },
   "include": [

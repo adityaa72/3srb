@@ -1,11 +1,8 @@
 import Head from "next/head";
 
-import { api } from "@/utils/api";
-import { SHARED_VARIABLE } from "@sharecode/common";
+import { SHARED_VARIABLE } from "@share/common";
 
 export default function Home() {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
-
   return (
     <>
       <Head>

@@ -6,12 +6,41 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "mongodb"
+    // NOTE: When using mysql or sqlserver, uncomment the @db.Text annotations in model Account below
+    // Further reading:
+    // https://next-auth.js.org/adapters/prisma#create-the-prisma-schema
+    // https://www.prisma.io/docs/reference/api-reference/prisma-schema-reference#string
     url      = env("DATABASE_URL")
 }
 
-model Example {
-    id        String   @id @default(cuid())
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+// ============================ User =====================================
+
+model User {
+    id       String  @id @default(auto()) @map("_id") @db.ObjectId
+    userId   Int     @unique
+    email    String  @unique
+    name     String
+    password String?
+    avatar   String?
+}
+
+// ============================ Otp =====================================
+
+model Otp {
+    id        String      @id @default(auto()) @map("_id") @db.ObjectId
+    otp       Int
+    email     String
+    validTill DateTime
+    purpose   Otp_Purpose
+
+    @@unique([otp, email, purpose])
+}
+
+enum Otp_Purpose {
+    ChangePassword
+    Login
+    Register
+    ResetPassword
+    TwoFa
 }
