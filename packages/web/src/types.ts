@@ -10,4 +10,5 @@ export type RequiredField<T, K extends keyof T> = Omit<T, K> & {
 
 export { type AppRouter } from "@/server/api/root";
 export * from "@prisma/client";
+
 export type UserJson = Omit<User, "password">;

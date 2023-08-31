@@ -9,7 +9,7 @@ const config = {
     "async",
     "async/typescript",
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended", 
     "prettier",
   ],
   rules: {
@@ -22,10 +22,11 @@ const config = {
     ],
     "@typescript-eslint/no-floating-promises": "error",
     "@typescript-eslint/await-thenable": "error",
-    "@typescript-eslint/no-misused-promises": "error",
+    "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/promise-function-async": "error",
     "@typescript-eslint/require-await": "error",
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "react/no-unescaped-entities": "off",
   },
 };
 

@@ -6,18 +6,16 @@ export type UserState = {
   isAuthenticated: boolean;
   user: UserJson | null;
 };
-let name = 3;
 
 type UserAction = {
   logout: () => void;
   login: ({}: { user: UserJson; Authorization: string }) => void;
 };
 
-export const useUser = () =>
-  create<UserState & UserAction>()((set) => ({
-    isAuthenticated: false,
-    user: null,
-    logout: () => set({ user: null }),
-    login: ({ Authorization, user }) =>
-      set({ user, isAuthenticated: true, Authorization }),
-  }));
+export const useUser = create<UserState & UserAction>((set) => ({
+  isAuthenticated: false,
+  user: null,
+  logout: () => set({ user: null }),
+  login: ({ Authorization, user }) =>
+    set({ user, isAuthenticated: true, Authorization }),
+}));

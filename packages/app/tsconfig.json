@@ -26,6 +26,7 @@
       "@theme/*": ["../common/theme/*"]
     }
   },
+  "references": [{ "path": "../web" }],
   "include": [
     ".eslintrc.js",
     "**/*.ts",

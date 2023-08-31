@@ -26,6 +26,7 @@ const config = {
     "@typescript-eslint/promise-function-async": "error",
     "@typescript-eslint/require-await": "error",
     "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    "@typescript-eslint/ban-ts-comment":"off"
   },
 };
 

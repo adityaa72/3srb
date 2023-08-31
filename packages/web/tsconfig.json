@@ -22,11 +22,15 @@
       "@constants/*": ["../common/constants/*"],
       "@utils/*": ["../common/utils/*"],
       "@store/*": ["../common/store/*"],
+      "@helpers/*": ["../common/helpers/*"],
       "@theme/*": ["../common/theme/*"]
     },
     "composite": true,
     "noEmit": true
   },
+  "references": [
+    {"path": "../common"}
+  ],
   "include": [
     ".eslintrc.cjs",
     "next-env.d.ts",

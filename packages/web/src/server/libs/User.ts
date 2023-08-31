@@ -2,6 +2,8 @@ import { validateHash } from "@/utils/bcrypt";
 import { ClientError } from "@/utils/errors";
 import { type User as UserModel } from "@prisma/client";
 import { prisma } from "../db";
+import { removeAttrsFromObject } from "@helpers/object";
+import { UserJson } from "@/types";
 
 class User {
   // =========== Properties ===========
@@ -24,6 +26,12 @@ class User {
 
   public get userId() {
     return this.row.userId;
+  }
+
+  public toJson() {
+    const { row } = this;
+    const user = removeAttrsFromObject(row, ["password"]);
+    return user satisfies UserJson;
   }
 
   // =========== Public Static Methods ===========

@@ -27,6 +27,7 @@ const login = async ({
   return {
     message: "Login Successful",
     token,
+    user: user.toJson(),
   } satisfies ResponseMessage;
 };
 export default login;

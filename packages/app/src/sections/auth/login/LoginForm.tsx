@@ -1,7 +1,8 @@
-import { Button } from "@/ui";
 import { RHFProvider, RHFTextField } from "@/components/RHF";
+import { Button } from "@/ui";
 import { api, type RouterInput } from "@/utils/api";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useUser } from "@store/user";
 import authSchema from "@validations/user/auth";
 import { useForm, type SubmitHandler } from "react-hook-form";
 
@@ -19,11 +20,13 @@ const LoginForm = () => {
   });
   const { handleSubmit } = methods;
 
+  const { login } = useUser();
   const { mutate, isLoading } = api.user.auth.login.useMutation();
   const onSubmit: SubmitHandler<FormValues> = (data) =>
     mutate(data, {
-      onSuccess(data, variables, context) {
-        const { message, token } = data;
+      onSuccess(data) {
+        const { token, user } = data;
+        login({ Authorization: token, user });
       },
     });
 
