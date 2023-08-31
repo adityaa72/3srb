@@ -35,6 +35,5 @@
     "**/*.cjs",
     "**/*.mjs"
   ],
-  "exclude": ["node_modules"],
-  "references": [{ "path": "../common" }]
+  "exclude": ["node_modules"]
 }

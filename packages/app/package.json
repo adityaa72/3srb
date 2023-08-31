@@ -1,7 +1,8 @@
 {
   "name": "@share/app",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "main": "index.ts",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -16,6 +17,7 @@
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/stack": "^6.3.17",
     "@share/common": "1.0.0",
+    "@share/web": "1.0.0",
     "@tanstack/react-query": "^4.33.0",
     "@trpc/client": "^10.38.1",
     "@trpc/react-query": "^10.38.1",
@@ -71,9 +73,6 @@
     "nohoist": [
       "**"
     ]
-  },
-  "resolutions": {
-    "react": "./node_modules/.cache/null"
   },
   "engines": {
     "node": ">=16"

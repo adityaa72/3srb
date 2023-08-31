@@ -20,9 +20,9 @@ export function TrpcProvider({ children }: Props) {
     () =>
       new QueryClient({
         logger: {
-          log(err) {},
-          warn: (err) => {},
-          error: (err) => {},
+          log() {},
+          warn: () => {},
+          error: () => {},
         },
         defaultOptions: {
           queries: {

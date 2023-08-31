@@ -1,0 +1,41 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /opt/homebrew/opt/ruby/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/opt/homebrew/opt/ruby/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/jamsrworld/.cargo/bin:/Users/jamsrworld/.fig/bin:/Users/jamsrworld/.local/bin:/Users/jamsrworld/Library/Android/sdk/emulator:/Users/jamsrworld/Library/Android/sdk/platform-tools:/Users/jamsrworld/Library/Android/sdk/build-tools/34.0.0:/Users/jamsrworld/.gem/ruby/3.2.0/bin:/Users/jamsrworld/.rvm/bin:/Users/jamsrworld/Library/Android/sdk/emulator:/Users/jamsrworld/Library/Android/sdk/platform-tools:/Users/jamsrworld/Library/Android/sdk/build-tools/34.0.0:/Users/jamsrworld/.gem/ruby/3.2.0/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  20.5.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: ENOENT: no such file or directory, lstat '/Users/jamsrworld/Documents/react-native/3srb/packages/web/node_modules/tailwindcss'
+
+npm manifest: 
+  {
+    "name": "3srb",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+      "packages/*"
+    ],
+    "dependencies": {
+      "react": "^18.2.0"
+    },
+    "scripts": {
+      "reset": "find . -type dir -name node_modules | xargs rm -rf && rm -rf yarn.lock"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
