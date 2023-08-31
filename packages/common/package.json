@@ -1,9 +1,14 @@
 {
   "name": "@share/common",
   "version": "1.0.0",
+  "private": true,
   "main": "index.ts",
   "license": "MIT",
   "dependencies": {
-    "date-fns": "^2.30.0"
+    "date-fns": "^2.30.0",
+    "zustand": "^4.4.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
   }
 }

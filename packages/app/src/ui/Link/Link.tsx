@@ -5,7 +5,7 @@ import {
   getColorByNotation,
   useAppTheme,
   type PaletteColorKeys,
-} from "@/store/theme";
+} from "@store/theme";
 import { useLinkProps } from "@react-navigation/native";
 import { TouchableOpacity, type TouchableOpacityProps } from "react-native";
 

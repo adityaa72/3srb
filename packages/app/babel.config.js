@@ -10,6 +10,8 @@ module.exports = {
           "@validations": "../common/validations",
           "@constants": "../common/constants",
           "@utils": "../common/utils",
+          "@store": "../common/store",
+          "@theme": "../common/theme",
         },
       },
     ],

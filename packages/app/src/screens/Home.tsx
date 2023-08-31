@@ -1,5 +1,5 @@
 import { Link, Typography } from "@/ui";
-import { toggleTheme } from "@/store/theme";
+import { toggleTheme } from "@store/theme";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Home = () => {

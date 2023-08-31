@@ -1,4 +1,4 @@
-import { APP_COLORS } from "@/theme/colors";
+import { APP_COLORS } from "@theme/colors";
 import { StyleSheet, Text, View } from "react-native";
 
 export type FormHelperTextProps = {

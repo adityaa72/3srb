@@ -1,4 +1,4 @@
-import { useAppTheme } from "@/store/theme";
+import { useAppTheme } from "@store/theme";
 import { StyleSheet } from "react-native";
 import Box from "../Box";
 

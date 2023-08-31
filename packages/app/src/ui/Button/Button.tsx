@@ -5,7 +5,7 @@ import {
   getColorByNotation,
   useAppTheme,
   type PaletteColorKeys,
-} from "@/store/theme";
+} from "@store/theme";
 import Color from "color";
 import { type ReactNode } from "react";
 import {

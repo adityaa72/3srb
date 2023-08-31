@@ -2,7 +2,7 @@ import {
   type PaletteColorKeys,
   getColorByNotation,
   useAppTheme,
-} from "@/store/theme";
+} from "@store/theme";
 import AntDesign from "react-native-vector-icons/AntDesign";
 import Entypo from "react-native-vector-icons/Entypo";
 import Feather from "react-native-vector-icons/Feather";

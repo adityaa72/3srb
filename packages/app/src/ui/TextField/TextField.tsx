@@ -1,4 +1,4 @@
-import { useAppTheme } from "@/store/theme";
+import { useAppTheme } from "@store/theme";
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 import {

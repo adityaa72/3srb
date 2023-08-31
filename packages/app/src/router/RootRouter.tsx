@@ -1,8 +1,6 @@
-import Typography from "@/ui/Typography";
 import Home from "@/screens/Home";
 import Login from "@/screens/Login";
 import Register from "@/screens/Register";
-import { useAppTheme } from "@/store/theme";
 import { type DrawerNavigationProp } from "@react-navigation/drawer";
 import {
   NavigationContainer,
@@ -13,6 +11,7 @@ import {
   createStackNavigator,
   type StackNavigationProp,
 } from "@react-navigation/stack";
+import { useAppTheme } from "@store/theme";
 import { SafeAreaView } from "react-native";
 import { type DrawerNavigationParamList } from "./DrawerRouter";
 
@@ -34,7 +33,9 @@ const { Navigator, Screen } = Stack;
 
 function Router() {
   const { palette, spacing } = useAppTheme();
-
+  console.log("spacing->", spacing)
+  return;
+  
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer
@@ -51,7 +52,7 @@ function Router() {
         }}
       >
         <Navigator
-          initialRouteName="Login"
+          initialRouteName="Home"
           screenOptions={{
             headerShown: false,
             cardStyle: {

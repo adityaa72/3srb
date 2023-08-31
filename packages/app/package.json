@@ -25,7 +25,6 @@
     "clsx": "^2.0.0",
     "color": "^4.2.3",
     "lottie-react-native": "^6.2.0",
-    "react": "18.2.0",
     "react-hook-form": "^7.45.4",
     "react-native": "0.72.4",
     "react-native-gesture-handler": "^2.12.1",
@@ -39,8 +38,7 @@
     "superjson": "^1.13.1",
     "twrnc": "^3.6.4",
     "zod": "^3.22.2",
-    "zod-validation-error": "^1.5.0",
-    "zustand": "^4.4.1"
+    "zod-validation-error": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.22.11",
@@ -72,12 +70,7 @@
   },
   "workspaces": {
     "nohoist": [
-      "react-native",
-      "react-native/**",
-      "react",
-      "react/**",
-      "react-native-vector-icons",
-      "react-native-vector-icons/**"
+      "**"
     ]
   },
   "engines": {

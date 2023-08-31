@@ -3,8 +3,8 @@ import {
   getColorByNotation,
   useAppTheme,
   type PaletteColorKeys,
-} from "@/store/theme";
-import { type TypographyVariants } from "@/theme/typography";
+} from "@store/theme";
+import { type TypographyVariants } from "@theme/typography";
 import { Text, type TextProps } from "react-native";
 import tw from "twrnc";
 

@@ -1,4 +1,4 @@
-import { useAppTheme } from "@/store/theme";
+import { useAppTheme } from "@store/theme";
 import { useEffect } from "react";
 import { StyleSheet, type StyleProp, type ViewStyle } from "react-native";
 import Animated, {

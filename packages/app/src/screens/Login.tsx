@@ -1,6 +1,6 @@
-import { Link, Stack, Typography } from "@/ui";
 import AuthLayout from "@/sections/auth/layout";
 import { LoginForm } from "@/sections/auth/login";
+import { Link, Stack, Typography } from "@/ui";
 import { ScrollView } from "react-native";
 
 const Login = () => {

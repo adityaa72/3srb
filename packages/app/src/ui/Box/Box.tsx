@@ -2,7 +2,7 @@ import {
   getColorByNotation,
   useAppTheme,
   type PaletteColorKeys,
-} from "@/store/theme";
+} from "@store/theme";
 import {
   View,
   type FlexStyle,

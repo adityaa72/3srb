@@ -1,5 +1,5 @@
 import Box, { type BoxProps } from "@/ui/Box";
-import { useAppTheme } from "@/store/theme";
+import { useAppTheme } from "@store/theme";
 import { StyleSheet } from "react-native";
 
 const Divider = ({ children, ...otherProps }: BoxProps) => {

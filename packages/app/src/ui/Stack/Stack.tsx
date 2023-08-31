@@ -1,5 +1,5 @@
 import Box, { type BoxProps } from "@/ui/Box";
-import { useAppTheme } from "@/store/theme";
+import { useAppTheme } from "@store/theme";
 import { type ReactNode } from "react";
 import { type FlexStyle } from "react-native";
 
