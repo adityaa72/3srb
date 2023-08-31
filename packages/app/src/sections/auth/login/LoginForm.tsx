@@ -20,7 +20,12 @@ const LoginForm = () => {
   const { handleSubmit } = methods;
 
   const { mutate, isLoading } = api.user.auth.login.useMutation();
-  const onSubmit: SubmitHandler<FormValues> = (data) => mutate(data);
+  const onSubmit: SubmitHandler<FormValues> = (data) =>
+    mutate(data, {
+      onSuccess(data, variables, context) {
+        const { message, token } = data;
+      },
+    });
 
   return (
     <RHFProvider methods={methods}>

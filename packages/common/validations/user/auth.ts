@@ -1,5 +1,5 @@
-import zodSchemas from "../../utils/zod";
 import { discriminatedUnion, literal, object, string, type TypeOf } from "zod";
+import zodSchemas from "../../utils/zod";
 
 const email = string()
   .nonempty("Email is required")

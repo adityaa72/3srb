@@ -1,11 +1,12 @@
-import { UserJson } from "@share/web/src/types";
+import { type UserJson } from "@share/web/src/types";
 import { create } from "zustand";
 
 export type UserState = {
   Authorization?: string;
-  isAuthenticated?: boolean;
+  isAuthenticated: boolean;
   user: UserJson | null;
 };
+let name = 3;
 
 type UserAction = {
   logout: () => void;
@@ -14,7 +15,6 @@ type UserAction = {
 
 export const useUser = () =>
   create<UserState & UserAction>()((set) => ({
-    Authorization: "",
     isAuthenticated: false,
     user: null,
     logout: () => set({ user: null }),

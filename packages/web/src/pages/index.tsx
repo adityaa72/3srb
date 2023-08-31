@@ -1,10 +1,7 @@
 import { SHARED_VARIABLE } from "@share/common";
-import { useCounter } from "@store/counter";
 import Head from "next/head";
 
 export default function Home() {
-  const { count, increase } = useCounter();
-  console.log("count->", count);
   return (
     <>
       <Head>
@@ -20,7 +17,6 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c]">
         <div>{SHARED_VARIABLE}</div>
-        <button onClick={increase}>increase</button>
       </main>
     </>
   );

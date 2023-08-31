@@ -1,0 +1,50 @@
+{
+  "folders": [
+    {
+      "name": "✨ 3srb",
+      "path": "../"
+    },
+    {
+      "name": "📦 @share/app",
+      "path": "../packages/app"
+    },
+    {
+      "name": "🎉 @share/common",
+      "path": "../packages/common"
+    },
+    {
+      "name": "🚀 @share/web",
+      "path": "../packages/web"
+    }
+  ],
+  "settings": {
+    "explorerExclude.backup": {},
+    "files.exclude": {
+      "**/.git": false,
+      "**/.svn": false,
+      "**/.hg": false,
+      "**/CVS": false,
+      "**/.DS_Store": false,
+      "**/Thumbs.db": false,
+      "**/node_modules": false
+    },
+    "cSpell.words": [
+      "clsx",
+      "hookform",
+      "Jamsrworld",
+      "nextjs",
+      "share",
+      "superjson",
+      "tailwindcss",
+      "tanstack",
+      "trpc",
+      "twrnc",
+      "zustand"
+    ],
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ]
+  }
+}

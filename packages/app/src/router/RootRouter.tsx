@@ -58,7 +58,10 @@ function Router() {
             },
           }}
         >
-          <Screen name="Home" component={Home} />
+          <Screen
+            name="Home"
+            component={Home}
+          />
           <Screen
             name="Login"
             component={Login}
