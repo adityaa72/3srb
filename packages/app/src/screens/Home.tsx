@@ -1,5 +1,4 @@
-import Link from "@/components/Link";
-import Typography from "@/components/Typography";
+import { Link, Typography } from "@/ui";
 import { toggleTheme } from "@/store/theme";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 

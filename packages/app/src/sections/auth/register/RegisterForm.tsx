@@ -1,5 +1,5 @@
-import Button from "@/components/Button";
 import { RHFProvider, RHFTextField } from "@/components/RHF";
+import { Button } from "@/ui";
 import { api, type RouterInput } from "@/utils/api";
 import { zodResolver } from "@hookform/resolvers/zod";
 import authSchema from "@validations/user/auth";
@@ -27,11 +27,14 @@ const RegisterForm = () => {
   const { handleSubmit } = methods;
 
   const { mutate, isLoading } = api.user.auth.register.useMutation();
-  const onSubmit: SubmitHandler<FormValues> = data => mutate(data);
+  const onSubmit: SubmitHandler<FormValues> = (data) => mutate(data);
 
   return (
     <RHFProvider methods={methods}>
-      <RHFTextField<FormValues> label="Full Name" name="name" />
+      <RHFTextField<FormValues>
+        label="Full Name"
+        name="name"
+      />
       <RHFTextField<FormValues>
         label="Email"
         name="email"
@@ -51,7 +54,11 @@ const RegisterForm = () => {
         showPassword={showPassword}
         onTogglePassword={handleTogglePassword}
       />
-      <Button loading={isLoading} onPress={handleSubmit(onSubmit)} size="large">
+      <Button
+        loading={isLoading}
+        onPress={handleSubmit(onSubmit)}
+        size="large"
+      >
         Proceed
       </Button>
     </RHFProvider>

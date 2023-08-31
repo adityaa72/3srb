@@ -1,6 +1,4 @@
-import Link from "@/components/Link";
-import Stack from "@/components/Stack";
-import Typography from "@/components/Typography";
+import { Link, Stack, Typography } from "@/ui";
 import AuthLayout from "@/sections/auth/layout";
 import { LoginForm } from "@/sections/auth/login";
 import { ScrollView } from "react-native";
@@ -15,7 +13,10 @@ const Login = () => {
     >
       <AuthLayout>
         <LoginForm />
-        <Stack direction="row" justifyContent="center">
+        <Stack
+          direction="row"
+          justifyContent="center"
+        >
           <Typography>Don't Have An Account?</Typography>
           <Link href="/Register">Register</Link>
         </Stack>

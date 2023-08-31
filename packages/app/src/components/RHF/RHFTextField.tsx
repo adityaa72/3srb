@@ -5,11 +5,11 @@ import {
   type FieldValues,
   type UseControllerProps,
 } from "react-hook-form";
-import Box from "../Box";
-import FormHelperText from "../FormHelperText/FormHelperText";
-import Icon from "../Icon";
-import IconButton from "../IconButton";
-import TextField, { type TextFieldProps } from "../TextField";
+import Box from "../../ui/Box";
+import FormHelperText from "../../ui/FormHelperText/FormHelperText";
+import Icon from "../../ui/Icon";
+import IconButton from "../../ui/IconButton";
+import TextField, { type TextFieldProps } from "../../ui/TextField";
 
 type Props<T extends FieldValues> = UseControllerProps<T> &
   TextFieldProps & {

@@ -1,8 +1,8 @@
-import Box from "@/components/Box";
-import Button from "@/components/Button";
-import Divider from "@/components/Divider";
-import Image from "@/components/Image";
-import Typography from "@/components/Typography";
+import Box from "@/ui/Box";
+import Button from "@/ui/Button";
+import Divider from "@/ui/Divider";
+import Image from "@/ui/Image";
+import Typography from "@/ui/Typography";
 import { APP_COLORS } from "@/theme/colors";
 import React from "react";
 import LinearGradient from "react-native-linear-gradient";
