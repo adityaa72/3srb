@@ -9,8 +9,8 @@ type FormValues = RouterInput["user"]["auth"]["login"];
 
 const LoginForm = () => {
   const defaultValues: FormValues = {
-    email: "",
-    password: "",
+    email: "princeraj9137@gmail.com",
+    password: "admin790",
   };
 
   const methods = useForm<FormValues>({

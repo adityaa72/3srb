@@ -33,9 +33,6 @@ const { Navigator, Screen } = Stack;
 
 function Router() {
   const { palette, spacing } = useAppTheme();
-  console.log("spacing->", spacing)
-  return;
-  
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <NavigationContainer
@@ -52,7 +49,7 @@ function Router() {
         }}
       >
         <Navigator
-          initialRouteName="Home"
+          initialRouteName="Login"
           screenOptions={{
             headerShown: false,
             cardStyle: {

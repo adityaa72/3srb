@@ -19,6 +19,11 @@ export function TrpcProvider({ children }: Props) {
   const [queryClient] = useState(
     () =>
       new QueryClient({
+        logger: {
+          log(err) {},
+          warn: (err) => {},
+          error: (err) => {},
+        },
         defaultOptions: {
           queries: {
             staleTime: 5 * 60 * 1000,
@@ -28,7 +33,7 @@ export function TrpcProvider({ children }: Props) {
           },
         },
         queryCache: new QueryCache({
-          onError: error => {
+          onError: (error) => {
             if (error instanceof TRPCClientError) {
               Alert.alert(error.message);
             } else {
@@ -37,7 +42,7 @@ export function TrpcProvider({ children }: Props) {
           },
         }),
         mutationCache: new MutationCache({
-          onError: error => {
+          onError: (error) => {
             if (error instanceof TRPCClientError) {
               Alert.alert(error.message);
             } else {
@@ -73,7 +78,10 @@ export function TrpcProvider({ children }: Props) {
     }),
   );
   return (
-    <api.Provider client={trpcClient} queryClient={queryClient}>
+    <api.Provider
+      client={trpcClient}
+      queryClient={queryClient}
+    >
       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
     </api.Provider>
   );
