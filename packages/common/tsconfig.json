@@ -17,8 +17,9 @@
     "noUncheckedIndexedAccess": true,
     "baseUrl": ".",
     "composite": true,
-    "noEmit": true,
+    "noEmit": true
   },
+  "references": [{ "path": "../web" }],
   "include": [
     ".eslintrc.cjs",
     "*.ts",

@@ -10,7 +10,6 @@ import { type RootNavigation } from "../router/RootRouter";
 const Login = () => {
   const navigation = useNavigation<RootNavigation>();
   const { isAuthenticated } = useUser();
-  console.log("isAuthenticated->", isAuthenticated)
 
   useEffect(() => {
     if (isAuthenticated) navigation.navigate("Home");

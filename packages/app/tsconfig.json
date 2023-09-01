@@ -23,7 +23,9 @@
       "@constants/*": ["../common/constants/*"],
       "@utils/*": ["../common/utils/*"],
       "@store/*": ["../common/store/*"],
-      "@theme/*": ["../common/theme/*"]
+      "@theme/*": ["../common/theme/*"],
+      "@web/*": ["../web/src/*"],
+      "@common/*": ["../common/*"]
     }
   },
   "references": [{ "path": "../web" }],

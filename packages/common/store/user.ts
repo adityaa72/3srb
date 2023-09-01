@@ -15,7 +15,8 @@ type UserAction = {
 export const useUser = create<UserState & UserAction>((set) => ({
   isAuthenticated: false,
   user: null,
-  logout: () => set({ user: null }),
+  logout: () =>
+    set({ user: null, isAuthenticated: false, Authorization: undefined }),
   login: ({ Authorization, user }) =>
     set({ user, isAuthenticated: true, Authorization }),
 }));

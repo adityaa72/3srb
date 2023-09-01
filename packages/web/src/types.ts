@@ -12,3 +12,14 @@ export { type AppRouter } from "@/server/api/root";
 export * from "@prisma/client";
 
 export type UserJson = Omit<User, "password">;
+
+export {
+  type AdminRouterInputs,
+  type AdminRouterOutputs,
+  type BaseRouterInputs,
+  type BaseRouterOutputs,
+  type RouterInputs,
+  type RouterOutputs,
+  type UserRouterInputs,
+  type UserRouterOutputs,
+} from "@/utils/api";

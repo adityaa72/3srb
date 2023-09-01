@@ -49,7 +49,7 @@ function Router() {
         }}
       >
         <Navigator
-          initialRouteName="Login"
+          initialRouteName="Register"
           screenOptions={{
             headerShown: false,
             cardStyle: {

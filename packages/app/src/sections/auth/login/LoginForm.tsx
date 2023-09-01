@@ -1,17 +1,21 @@
 import { RHFProvider, RHFTextField } from "@/components/RHF";
+import { type RootNavigation } from "@/router/RootRouter";
 import { Button } from "@/ui";
-import { api, type RouterInput } from "@/utils/api";
+import { api } from "@/utils/api";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useNavigation } from "@react-navigation/native";
 import { useUser } from "@store/user";
 import authSchema from "@validations/user/auth";
+import { type UserRouterInputs } from "@web/types";
 import { useForm, type SubmitHandler } from "react-hook-form";
 
-type FormValues = RouterInput["user"]["auth"]["login"];
+type FormValues = UserRouterInputs["auth"]["login"];
 
 const LoginForm = () => {
+  const navigation = useNavigation<RootNavigation>();
   const defaultValues: FormValues = {
-    email: "princeraj9137@gmail.com",
-    password: "admin790",
+    email: "",
+    password: "",
   };
 
   const methods = useForm<FormValues>({
@@ -27,6 +31,7 @@ const LoginForm = () => {
       onSuccess(data) {
         const { token, user } = data;
         login({ Authorization: token, user });
+        navigation.navigate("Home");
       },
     });
 

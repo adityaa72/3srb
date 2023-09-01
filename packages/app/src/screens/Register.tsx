@@ -1,10 +1,12 @@
 import AuthLayout from "@/sections/auth/layout";
-import { RegisterForm } from "@/sections/auth/register";
-import { Link, Stack } from "@/ui";
-import Typography from "@/ui/Typography";
+import { RegisterStep1, RegisterStep2 } from "@/sections/auth/register";
+
+import { useRegister } from "@store/register";
 import { ScrollView } from "react-native";
 
 const Register = () => {
+  const data = useRegister();
+  const { step } = data;
   return (
     <ScrollView
       contentContainerStyle={{
@@ -13,14 +15,11 @@ const Register = () => {
       automaticallyAdjustKeyboardInsets={true}
     >
       <AuthLayout>
-        <RegisterForm />
-        <Stack
-          direction="row"
-          className="self-center"
-        >
-          <Typography>Don't Have An Account?</Typography>
-          <Link href="/Login">Login</Link>
-        </Stack>
+        {step === 1 ? (
+          <RegisterStep1 formData={data} />
+        ) : (
+          <RegisterStep2 formData={data} />
+        )}
       </AuthLayout>
     </ScrollView>
   );

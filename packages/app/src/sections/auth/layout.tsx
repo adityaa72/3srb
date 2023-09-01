@@ -31,6 +31,7 @@ const AuthLayout = ({ children }: Props) => {
             source={{
               uri: "https://cdn3d.iconscout.com/3d/free/thumb/free-om-coin-4268033-3543579.png",
             }}
+            alt="ohm"
           />
           <Typography
             variant="h4"

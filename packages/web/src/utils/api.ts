@@ -59,6 +59,9 @@ export const api = createTRPCNext<AppRouter>({
  * @example type HelloInput = RouterInputs['example']['hello']
  */
 export type RouterInputs = inferRouterInputs<AppRouter>;
+export type BaseRouterInputs = Omit<RouterInputs, "user" | "admin">;
+export type UserRouterInputs = RouterInputs["user"];
+export type AdminRouterInputs = RouterInputs["admin"];
 
 /**
  * Inference helper for outputs.
@@ -66,3 +69,6 @@ export type RouterInputs = inferRouterInputs<AppRouter>;
  * @example type HelloOutput = RouterOutputs['example']['hello']
  */
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
+export type BaseRouterOutputs = Omit<RouterOutputs, "user" | "admin">;
+export type UserRouterOutputs = RouterOutputs["user"];
+export type AdminRouterOutputs = RouterOutputs["admin"];
